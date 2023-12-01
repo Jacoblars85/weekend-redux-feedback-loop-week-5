@@ -10,11 +10,13 @@ function Comments() {
 
 
             <p>Comments</p>
-            <input />
+
+            <input 
+            data-testid="input"/>
 
 
-            <Link to="/">
-                <button>Next</button>
+            <Link to="/review">
+                <button data-testid="next" >Next</button>
             </Link>
 
 

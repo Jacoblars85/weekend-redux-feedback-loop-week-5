@@ -10,10 +10,12 @@ function Feeling() {
 
 
             <p>Feeling?</p>
-            <input />
+            
+            <input 
+            data-testid="input"/>
 
             <Link to="/understanding">
-                <button>Next</button>
+                <button data-testid="next" >Next</button>
             </Link>
 
 

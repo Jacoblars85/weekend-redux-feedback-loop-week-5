@@ -10,10 +10,12 @@ function Understanding() {
 
 
             <p>Understanding?</p>
-            <input />
+
+            <input 
+            data-testid="input"/>
 
             <Link to="/support">
-                <button>Next</button>
+                <button data-testid="next" >Next</button>
             </Link>
 
 

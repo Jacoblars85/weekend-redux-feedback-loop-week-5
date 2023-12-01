@@ -10,10 +10,12 @@ function Support() {
 
 
             <p>Support?</p>
-            <input />
+
+            <input data-testid="input"
+            />
 
             <Link to="/comments">
-                <button>Next</button>
+                <button data-testid="next" >Next</button>
             </Link>
 
 
