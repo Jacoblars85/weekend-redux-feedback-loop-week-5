@@ -1,8 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
 
 function Review() {
+    const feeling = useSelector((store) => store.feeling)
+    const understanding = useSelector((store) => store.understanding)
+    const support = useSelector((store) => store.support)
+    const comments = useSelector((store) => store.comments)
 
     return (
         <div>

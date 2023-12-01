@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'
 
 function Feeling() {
     const [feelingInput, setFeelingInput] = useState('');
@@ -15,8 +16,8 @@ function Feeling() {
 
             <input
                 data-testid="input"
-                onChange={(e) => setNameInput(e.target.value)}
-                value={nameInput}
+                onChange={(e) => setFeelingInput(e.target.value)}
+                value={feelingInput}
                 type='text'
                 placeholder='' />
 

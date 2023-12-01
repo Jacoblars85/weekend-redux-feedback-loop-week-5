@@ -30,6 +30,8 @@ const feeling = (state = "", action) => {
     return state;
   }
 
+  
+
 const store = createStore(
     combineReducers({
       feeling,
