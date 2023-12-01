@@ -3,34 +3,34 @@ import logger from 'redux-logger';
 
 
 const feeling = (state = "", action) => {
-    if (action.type === '') {
+    if (action.type === 'SET_FEELING') {
       return action.payload
   }
     return state;
   }
 
   const understanding = (state = "", action) => {
-    if (action.type === '') {
+    if (action.type === 'SET_UNDERSTANDING') {
       return action.payload
   }
     return state;
   }
 
   const support = (state = "", action) => {
-    if (action.type === '') {
+    if (action.type === 'SET_SUPPORT') {
       return action.payload
   }
     return state;
   }
 
   const comments = (state = "", action) => {
-    if (action.type === '') {
+    if (action.type === 'SET_COMMENTS') {
       return action.payload
   }
     return state;
   }
 
-  
+
 
 const store = createStore(
     combineReducers({

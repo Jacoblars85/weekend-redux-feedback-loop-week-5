@@ -2,9 +2,28 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 function Understanding() {
     const [understandingInput, setUnderstandingInput] = useState('');
+
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+
+    const submitUnderstanding = (e) => {
+        e.preventDefault()
+
+        dispatch({
+            type: 'SET_UNDERSTANDING',
+            payload: understandingInput
+        })
+
+        history.push("/support")
+
+    }
+
+
 
     return (
         <div>
@@ -13,6 +32,8 @@ function Understanding() {
 
             <p>Understanding?</p>
 
+            <form onSubmit={submitUnderstanding}>
+
             <input
                 data-testid="input"
                 onChange={(e) => setUnderstandingInput(e.target.value)}
@@ -20,9 +41,11 @@ function Understanding() {
                 type='text'
                 placeholder='' />
 
-            <Link to="/support">
+         
                 <button data-testid="next" >Next</button>
-            </Link>
+           
+
+            </form>
 
 
         </div>

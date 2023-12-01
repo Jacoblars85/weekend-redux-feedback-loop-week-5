@@ -2,9 +2,26 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 function Comments() {
     const [commentsInput, setCommentsInput] = useState('');
+
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+
+    const submitComments = (e) => {
+        e.preventDefault()
+
+        dispatch({
+            type: 'SET_COMMENTS',
+            payload: commentsInput
+        })
+
+        history.push("/review")
+
+    }
 
 
 
@@ -15,6 +32,8 @@ function Comments() {
 
             <p>Comments</p>
 
+            <form onSubmit={submitComments}>
+
             <input
                 data-testid="input"
                 onChange={(e) => setCommentsInput(e.target.value)}
@@ -23,9 +42,11 @@ function Comments() {
                 placeholder='' />
 
 
-            <Link to="/review">
+    
                 <button data-testid="next" >Next</button>
-            </Link>
+         
+
+            </form>
 
 
         </div>

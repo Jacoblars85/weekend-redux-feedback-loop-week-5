@@ -9,14 +9,16 @@ function Review() {
     const support = useSelector((store) => store.support)
     const comments = useSelector((store) => store.comments)
 
+
+
     return (
         <div>
             <h1>Review Your Feedback</h1>
 
-            <p>feelings:</p>
-            <p>understanding:</p>
-            <p>support:</p>
-            <p>Comments:</p>
+            <p>feelings: {feeling}</p>
+            <p>understanding: {understanding}</p>
+            <p>support: {support}</p>
+            <p>Comments: {comments}</p>
 
             <Link to="/thankyou">
                 <button data-testid="next" >Submit</button>

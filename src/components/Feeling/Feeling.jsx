@@ -2,9 +2,28 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 function Feeling() {
     const [feelingInput, setFeelingInput] = useState('');
+
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+
+    const submitFeelings = (e) => {
+        e.preventDefault()
+
+        dispatch({
+            type: 'SET_FEELING',
+            payload: feelingInput 
+        })
+
+        history.push("/understanding")
+
+    }
+
+
 
 
     return (
@@ -14,6 +33,8 @@ function Feeling() {
 
             <p>Feeling?</p>
 
+            <form onSubmit={submitFeelings}>
+
             <input
                 data-testid="input"
                 onChange={(e) => setFeelingInput(e.target.value)}
@@ -21,9 +42,11 @@ function Feeling() {
                 type='text'
                 placeholder='' />
 
-            <Link to="/understanding">
+            
                 <button data-testid="next" >Next</button>
-            </Link>
+            
+
+            </form>
 
 
         </div>
