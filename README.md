@@ -1,9 +1,23 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Redux Feedback Loop Weekend #5
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+1. Install everything and get the basics set up.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+2. Make database and put all default into there.
+
+3. Make the feeling component and put input feild that sends that data to redux and next button will send you to next page.
+
+4. Make the understanding component and put input feild that sends that data to redux and next button will send you to next page.
+
+5. Make the support component and put input feild that sends that data to redux and next button will send you to next page.
+
+6. Make the comments component and put input feild that sends that data to redux and next button will send you to review page.
+
+7. The review page will get all previous reducers that got sent and put them onto the dom. and this will submit everything to the database
+
+8. it will clear the imput feilds and send you to the thank you page.
+
+9. the thank you page will have a button that can send you to the home page to do it all over again
+
+10. start styling.
