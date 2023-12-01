@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Comments() {
+    const [commentsInput, setCommentsInput] = useState('');
+
+    
 
     return (
         <div>
@@ -11,8 +14,12 @@ function Comments() {
 
             <p>Comments</p>
 
-            <input 
-            data-testid="input"/>
+            <input
+                data-testid="input"
+                onChange={(e) => setNameInput(e.target.value)}
+                value={nameInput}
+                type='text'
+                placeholder='' />
 
 
             <Link to="/review">

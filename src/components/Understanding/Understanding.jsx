@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Understanding() {
+    const [understandingInput, setUnderstandingInput] = useState('');
 
     return (
         <div>
@@ -11,8 +12,12 @@ function Understanding() {
 
             <p>Understanding?</p>
 
-            <input 
-            data-testid="input"/>
+            <input
+                data-testid="input"
+                onChange={(e) => setNameInput(e.target.value)}
+                value={nameInput}
+                type='text'
+                placeholder='' />
 
             <Link to="/support">
                 <button data-testid="next" >Next</button>

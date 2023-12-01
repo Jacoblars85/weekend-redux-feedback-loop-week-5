@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Feeling() {
+    const [feelingInput, setFeelingInput] = useState('');
+
 
     return (
         <div>
@@ -10,9 +12,13 @@ function Feeling() {
 
 
             <p>Feeling?</p>
-            
-            <input 
-            data-testid="input"/>
+
+            <input
+                data-testid="input"
+                onChange={(e) => setNameInput(e.target.value)}
+                value={nameInput}
+                type='text'
+                placeholder='' />
 
             <Link to="/understanding">
                 <button data-testid="next" >Next</button>

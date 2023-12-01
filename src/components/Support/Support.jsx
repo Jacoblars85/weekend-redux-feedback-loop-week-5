@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Support() {
+    const [supportInput, setSupportInput] = useState('');
 
     return (
         <div>
@@ -12,7 +13,10 @@ function Support() {
             <p>Support?</p>
 
             <input data-testid="input"
-            />
+            onChange={(e) => setNameInput(e.target.value)}
+            value={nameInput}
+            type='text'
+            placeholder=''/>
 
             <Link to="/comments">
                 <button data-testid="next" >Next</button>
