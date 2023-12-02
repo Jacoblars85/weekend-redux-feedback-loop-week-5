@@ -21,12 +21,9 @@ function Support() {
 
     }
 
-
-
     return (
         <div>
             <h1>How well are you being supported?</h1>
-
 
             <p>Support?</p>
 
@@ -38,13 +35,9 @@ function Support() {
                     type='text'
                     placeholder='' />
 
-
                 <button data-testid="next" >Next</button>
 
-
             </form>
-
-
         </div>
     );
 }

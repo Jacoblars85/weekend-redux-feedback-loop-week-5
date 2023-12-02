@@ -21,12 +21,9 @@ function Understanding() {
 
     }
 
-
-
     return (
         <div>
             <h1>How well are you understanding the content?</h1>
-
 
             <p>Understanding?</p>
 
@@ -42,10 +39,7 @@ function Understanding() {
 
                 <button data-testid="next" >Next</button>
 
-
             </form>
-
-
         </div>
     );
 }

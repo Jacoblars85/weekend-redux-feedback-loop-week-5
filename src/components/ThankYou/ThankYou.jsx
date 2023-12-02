@@ -12,8 +12,6 @@ function ThankYou() {
             <Link to="/">
                 <button data-testid="next" >Leave New Feedback</button>
             </Link>
-
-
         </div>
     );
 }

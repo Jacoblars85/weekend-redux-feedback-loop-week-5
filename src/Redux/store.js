@@ -1,7 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-
 const feeling = (state = "", action) => {
     if (action.type === 'SET_FEELING') {
         return action.payload
@@ -42,8 +41,6 @@ const comments = (state = "", action) => {
     return state;
 }
 
-
-
 const store = createStore(
     combineReducers({
         feeling,
@@ -53,6 +50,5 @@ const store = createStore(
     }),
     applyMiddleware(logger),
 );
-
 
 export default store;

@@ -13,7 +13,6 @@ function Review() {
 
     const history = useHistory()
 
-
     const postFeedback = () => {
         axios({
             method: 'POST',
@@ -26,11 +25,9 @@ function Review() {
             }
         }).then((response) => {
 
-
         }).catch((err) => {
             console.log(err);
         });
-
 
         dispatch({
             type: 'CLEAR_REDUCERS'
@@ -38,23 +35,16 @@ function Review() {
         history.push("/thankyou")
     }
 
-
-
     return (
         <div>
             <h1>Review Your Feedback</h1>
-
-
 
             <p>feelings: {feeling}</p>
             <p>understanding: {understanding}</p>
             <p>support: {support}</p>
             <p>Comments: {comments}</p>
 
-
             <button data-testid="next" onClick={postFeedback} >Submit</button>
-
-
         </div>
     );
 }

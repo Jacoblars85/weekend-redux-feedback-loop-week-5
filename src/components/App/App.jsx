@@ -41,7 +41,6 @@ function App() {
         <Route exact path="/thankyou">
           <ThankYou />
         </Route>
-
       </Router>
     </div>
   );
