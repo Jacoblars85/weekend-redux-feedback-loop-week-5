@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 function Review() {
     const feeling = useSelector((store) => store.feeling)
@@ -22,13 +23,14 @@ function Review() {
                 feeling: feeling,
                 understanding: understanding,
                 support: support,
-                comments: comments} 
-            }).then((response) => {
+                comments: comments
+            }
+        }).then((response) => {
 
 
-            }).catch((err) => {
-                console.log(err);
-            });
+        }).catch((err) => {
+            console.log(err);
+        });
 
 
         dispatch({
@@ -43,14 +45,16 @@ function Review() {
         <div>
             <h1>Review Your Feedback</h1>
 
-            <p>feelings: {feeling}</p>
-            <p>understanding: {understanding}</p>
-            <p>support: {support}</p>
-            <p>Comments: {comments}</p>
+   
 
-            <form onSubmit={postFeedback}>
-                <button data-testid="next" >Submit</button>
-            </form>
+                <p>feelings: {feeling}</p>
+                <p>understanding: {understanding}</p>
+                <p>support: {support}</p>
+                <p>Comments: {comments}</p>
+
+
+                <button data-testid="next" onClick={postFeedback} >Submit</button>
+
 
         </div>
     );
