@@ -36,7 +36,7 @@ function Comments() {
                     onChange={(e) => setCommentsInput(e.target.value)}
                     value={commentsInput}
                     type='text'
-                    placeholder='' />
+                    placeholder='text' />
 
                 <button data-testid="next" >Next</button>
 

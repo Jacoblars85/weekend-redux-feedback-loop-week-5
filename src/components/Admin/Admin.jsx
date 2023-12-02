@@ -32,7 +32,9 @@ function Admin() {
 
     return (
         <div>
+            <div className='boxAdmin'>
             <h1>Feedback Results!</h1>
+            </div>
 
             <table>
                 <thead>
@@ -52,6 +54,9 @@ function Admin() {
                         )
                     })}
                 </tbody>
+                <tfoot>
+                <tr className='footerTable'></tr>
+                </tfoot>
             </table>
 
         </div>

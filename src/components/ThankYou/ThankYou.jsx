@@ -5,13 +5,15 @@ function ThankYou() {
 
     return (
         <div>
-            <h1>Feedback!</h1>
+            <h1 className='thankHeader'>Feedback!</h1>
 
+            <div className='thankBody'>
             <h1>Thank You!</h1>
 
             <Link to="/">
-                <button data-testid="next" >Leave New Feedback</button>
+                <button data-testid="next" className='thankButton'>Leave New Feedback</button>
             </Link>
+            </div>
         </div>
     );
 }

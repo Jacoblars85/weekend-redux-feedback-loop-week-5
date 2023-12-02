@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -20,4 +22,113 @@
 
 h4 {
   font-style: italic;
+}
+
+/* TABLE */
+
+table {
+  width: 100%;
+  text-align: left;
+}
+table, th, td {
+  border: 1px solid black;
+  color: black;
+  border-collapse: collapse;
+  height: 2.15em;
+}
+th, td {
+  padding: .5em;
+  min-width: 3.5em;
+}
+thead{
+  background: #7a7a7a;
+  color: #fcfcfc;
+}
+tbody tr:nth-child(odd){ 
+  background: #fcfcfc;
+}
+tbody tr:nth-child(even){
+  background: #dcdcdc;
+}
+
+.footerTable {
+  background: grey;
+  border: 1px solid black;
+  height: 2.75em;
+}
+
+.boxAdmin {
+  display: flex;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 150px;
+  margin-top: 100px;
+  width: 500px;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  padding: 40px;
+justify-content: center;
+margin-left: 200px;
+}
+
+input {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-left: 150px;
+  margin-top: 25px;
+}
+
+button {
+  align-self: right;
+  align-content: right;
+  height: 45px;
+  width: 80px;
+  font-size: 120%;
+  text-align: center;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  float: center;
+  /* margin-right: 70px; */
+  border-radius: 10px;
+}
+
+.submitButton {
+  height: 45px;
+  width: 80px;
+  font-size: 120%;
+  text-align: center;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  float: center;
+  border-radius: 10px;
+}
+
+.reviewSizing {
+  font-size: 35px;
+}
+
+.thankButton {
+  background-color: cyan;
+  height: 50px;
+  width: 400px;
+  box-shadow: 5px 7px 4px rgba(0, 0, 0, 0.2);
+}
+
+.thankHeader {
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 600px;
+  padding: 40px;
+  margin-left: 150px;
+}
+
+.thankBody {
+  text-align: center;
+  border: 1px solid black;
+  width: 600px;
+  height: 400px;
+  padding: 40px;
+  margin-left: 150px;
 }

@@ -39,12 +39,16 @@ function Review() {
         <div>
             <h1>Review Your Feedback</h1>
 
+            <div className='reviewSizing'>
+
             <p>feelings: {feeling}</p>
             <p>understanding: {understanding}</p>
             <p>support: {support}</p>
             <p>Comments: {comments}</p>
-
-            <button data-testid="next" onClick={postFeedback} >Submit</button>
+            </div>
+            <div className='reviewButton'>
+            <button data-testid="next" onClick={postFeedback} className='submitButton'>Submit</button>
+            </div>
         </div>
     );
 }
