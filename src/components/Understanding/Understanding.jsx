@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import Header from '../Header/Header';
 
 function Understanding() {
     const [understandingInput, setUnderstandingInput] = useState('');
@@ -23,6 +24,8 @@ function Understanding() {
 
     return (
         <div>
+            <Header />
+            
             <h1>How well are you understanding the content?</h1>
 
             <p>Understanding?</p>
@@ -34,7 +37,7 @@ function Understanding() {
                     onChange={(e) => setUnderstandingInput(e.target.value)}
                     value={understandingInput}
                     type='text'
-                    placeholder='' />
+                    placeholder='1-5' />
 
 
                 <button data-testid="next" >Next</button>

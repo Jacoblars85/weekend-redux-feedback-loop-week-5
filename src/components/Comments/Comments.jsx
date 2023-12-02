@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import Header from '../Header/Header';
 
 function Comments() {
     const [commentsInput, setCommentsInput] = useState('');
@@ -23,6 +24,7 @@ function Comments() {
 
     return (
         <div>
+            <Header />
             <h1>Any comments you want to leave?</h1>
 
             <p>Comments</p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
+import Header from '../Header/Header';
 
 function Feeling() {
     const [feelingInput, setFeelingInput] = useState('');
@@ -21,6 +22,8 @@ function Feeling() {
 
     return (
         <div>
+            <Header />
+
             <h1>How are you feeling today?</h1>
 
 
@@ -33,7 +36,7 @@ function Feeling() {
                     onChange={(e) => setFeelingInput(e.target.value)}
                     value={feelingInput}
                     type='text'
-                    placeholder='' />
+                    placeholder='1-5' />
 
 
                 <button data-testid="next" >Next</button>

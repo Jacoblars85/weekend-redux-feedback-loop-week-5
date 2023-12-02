@@ -7,16 +7,13 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import ThankYou from '../ThankYou/ThankYou';
+import Admin from '../Admin/Admin';
 
 function App() {
 
   return (
     <div className='App'>
       <Router>
-        <header className='App-header'>
-          <h1 className='App-title'>Feedback!</h1>
-          <h4>Don't forget it!</h4>
-        </header>
 
         <Route exact path="/">
           <Feeling />
@@ -41,6 +38,11 @@ function App() {
         <Route exact path="/thankyou">
           <ThankYou />
         </Route>
+
+        <Route exact path="/admin">
+          <Admin />
+        </Route>
+
       </Router>
     </div>
   );
