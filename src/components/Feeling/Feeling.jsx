@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
 function Feeling() {
@@ -16,7 +14,7 @@ function Feeling() {
 
         dispatch({
             type: 'SET_FEELING',
-            payload: feelingInput 
+            payload: feelingInput
         })
 
         history.push("/understanding")
@@ -35,16 +33,16 @@ function Feeling() {
 
             <form onSubmit={submitFeelings}>
 
-            <input
-                data-testid="input"
-                onChange={(e) => setFeelingInput(e.target.value)}
-                value={feelingInput}
-                type='text'
-                placeholder='' />
+                <input
+                    data-testid="input"
+                    onChange={(e) => setFeelingInput(e.target.value)}
+                    value={feelingInput}
+                    type='text'
+                    placeholder='' />
 
-            
+
                 <button data-testid="next" >Next</button>
-            
+
 
             </form>
 

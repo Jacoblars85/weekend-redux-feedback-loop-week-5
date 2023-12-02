@@ -18,13 +18,13 @@ router.post('/', (req, res) => {
     const sqlValues = [feedbackInput.feeling, feedbackInput.understanding, feedbackInput.support, feedbackInput.comments];
 
     pool.query(sqlQueryText, sqlValues)
-     .then((dbResult) => {
-        res.sendStatus(201);
-        console.log('POST successful');
-    }).catch((dbError) => {
-      console.log('error posting things', dbError);
-        res.sendStatus(500);
-    })
+        .then((dbResult) => {
+            res.sendStatus(201);
+            console.log('POST successful');
+        }).catch((dbError) => {
+            console.log('error posting things', dbError);
+            res.sendStatus(500);
+        })
 })
 
 

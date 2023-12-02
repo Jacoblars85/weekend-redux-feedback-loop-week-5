@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
 function Comments() {
@@ -34,17 +32,17 @@ function Comments() {
 
             <form onSubmit={submitComments}>
 
-            <input
-                data-testid="input"
-                onChange={(e) => setCommentsInput(e.target.value)}
-                value={commentsInput}
-                type='text'
-                placeholder='' />
+                <input
+                    data-testid="input"
+                    onChange={(e) => setCommentsInput(e.target.value)}
+                    value={commentsInput}
+                    type='text'
+                    placeholder='' />
 
 
-    
+
                 <button data-testid="next" >Next</button>
-         
+
 
             </form>
 
