@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux'
+import AdminDelete from '../AdminDelete/AdminDelete';
 
 function Admin() {
     const dispatch = useDispatch()
@@ -32,7 +33,7 @@ function Admin() {
     return (
         <div>
             <h1>Feedback Results!</h1>
-            
+
             <table>
                 <thead>
                     <tr>
@@ -47,15 +48,7 @@ function Admin() {
                 <tbody>
                     {feedback.map((feed) => {
                         return (
-                            <tr key={feed.id}>
-                                <td>{feed.feeling}</td>
-                                <td>{feed.understanding}</td>
-                                <td>{feed.support}</td>
-                                <td>"{feed.comments}"</td>
-                                <td>
-                                    <button>delete</button>
-                                </td>
-                            </tr>
+                            <AdminDelete key={feed.id} feed={feed} getFeedback={getFeedback} />
                         )
                     })}
                 </tbody>
