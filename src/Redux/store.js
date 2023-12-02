@@ -4,43 +4,55 @@ import logger from 'redux-logger';
 
 const feeling = (state = "", action) => {
     if (action.type === 'SET_FEELING') {
-      return action.payload
-  }
+        return action.payload
+    }
+    if (action.type === 'CLEAR_REDUCERS') {
+        return ""
+    }
     return state;
-  }
+}
 
-  const understanding = (state = "", action) => {
+const understanding = (state = "", action) => {
     if (action.type === 'SET_UNDERSTANDING') {
-      return action.payload
-  }
+        return action.payload
+    }
+    if (action.type === 'CLEAR_REDUCERS') {
+        return ""
+    }
     return state;
-  }
+}
 
-  const support = (state = "", action) => {
+const support = (state = "", action) => {
     if (action.type === 'SET_SUPPORT') {
-      return action.payload
-  }
+        return action.payload
+    }
+    if (action.type === 'CLEAR_REDUCERS') {
+        return ""
+    }
     return state;
-  }
+}
 
-  const comments = (state = "", action) => {
+const comments = (state = "", action) => {
     if (action.type === 'SET_COMMENTS') {
-      return action.payload
-  }
+        return action.payload
+    }
+    if (action.type === 'CLEAR_REDUCERS') {
+        return ""
+    }
     return state;
-  }
+}
 
 
 
 const store = createStore(
     combineReducers({
-      feeling,
-      understanding,
-      support,
-      comments
+        feeling,
+        understanding,
+        support,
+        comments
     }),
     applyMiddleware(logger),
-  );
-  
-  
-  export default store;
+);
+
+
+export default store;

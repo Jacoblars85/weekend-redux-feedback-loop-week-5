@@ -9,6 +9,34 @@ function Review() {
     const support = useSelector((store) => store.support)
     const comments = useSelector((store) => store.comments)
 
+    const dispatch = useDispatch()
+
+    const history = useHistory()
+
+
+    const postFeedback = () => {
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: {
+                feeling: feeling,
+                understanding: understanding,
+                support: support,
+                comments: comments} 
+            }).then((response) => {
+
+
+            }).catch((err) => {
+                console.log(err);
+            });
+
+
+        dispatch({
+            type: 'CLEAR_REDUCERS'
+        })
+        history.push("/thankyou")
+    }
+
 
 
     return (
@@ -20,9 +48,9 @@ function Review() {
             <p>support: {support}</p>
             <p>Comments: {comments}</p>
 
-            <Link to="/thankyou">
+            <form onSubmit={postFeedback}>
                 <button data-testid="next" >Submit</button>
-            </Link>
+            </form>
 
         </div>
     );
